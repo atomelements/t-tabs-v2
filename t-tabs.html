@@ -52,7 +52,6 @@
 
 		</style>
 		<paper-tabs
-		noink="[[noink]]"
 		no-bar="[[noBar]]"
 		no-slide="[[noSlide]]"
 		scrollable="[[scrollable]]"
@@ -71,16 +70,7 @@
 		is: "t-tabs",
 
 		 properties: {
-        /**
-         * If true, ink ripple effect is disabled. When this property is changed,
-         * all descendant `<paper-tab>` elements have their `noink` property
-         * changed to the new value as well.
-         */
-        noink: {
-          type: Boolean,
-          value: false,
-          observer: '_noinkChanged'
-        },
+        
 
         /**
          * If true, the bottom bar to indicate the selected tab will not be shown.

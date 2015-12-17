@@ -7,12 +7,15 @@
 			:host{
 				outline: 0;
 			}
+			:host.iron-selected paper-tab ::content .tab-content{
+				opacity: 1;
+			}
 			paper-tab{
 				height: 100%;
 			}
 		</style>
 
-		<paper-tab>
+		<paper-tab noink>
         	<content></content>
 		</paper-tab>
 	</template>
