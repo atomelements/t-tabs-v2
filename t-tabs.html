@@ -21,12 +21,27 @@
             @apply(--layout);
             @apply(--layout-horizontal);
         }
+        :host ::content #tabsContainer {
+            color: var(--grey-four,#777777);
+        }
+        
+        :host([not-inverted]) ::content .iron-selected {
+            color: var(--default-primary-color, #07c5f2);
+        }
+        :host([not-inverted]) ::content .tab-content{
+            opacity: 1!important;
+          /*   to overwrite their default opacity style*/
+        } 
         
         :host([inverted]) ::content #tabsContainer {
             background: var(--default-primary-color, #07c5f2);
             color: var(--primary-background-color, #ffffff);
         }
         
+        paper-tabs ::content #selectionBar {
+            background-color: var(--default-primary-color, #07c5f2);
+        }
+
         :host([inverted]) ::content #selectionBar {
             background-color: var(--primary-background-color, #fff);
         }
@@ -127,6 +142,15 @@ Polymer({
         },
 
         /**
+         * If true, the tabs are aligned to bottom (the selection bar appears at the top).
+         */
+        notInverted: {
+            type: Boolean,
+            reflectToAttribute: true,
+            computed: '_getIfInverted(inverted)'
+        },
+
+        /**
          * Gets or sets the selected element. The default is to use the index of the item.
          */
         selected: {
@@ -145,6 +169,10 @@ Polymer({
             reflectToAttribute: true,
             value: "left"
         }
+    },
+
+    _getIfInverted: function(inverted){
+      return !inverted;
     }
 
 });
