@@ -1,6 +1,6 @@
 {
   "name": "t-tabs-v2",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "authors": [
     "Sounak Pal <talk2sounak@gmail.com>"
   ],
@@ -21,7 +21,7 @@
     "test",
     "tests"
   ],
-  "dependencies": { 
+  "dependencies": {
     "paper-tabs": "PolymerElements/paper-tabs#^1.2.3",
     "iron-flex-layout": "PolymerElements/iron-flex-layout#^1.0.0",
     "polymer": "Polymer/polymer#^1.1.0"
